@@ -18,7 +18,7 @@ For this example, we will have to add a `publish_at` attribute to the **Article*
   - `date` attribute named `publish_at` with `datetime` type
 
 And add some data with different dates and status to be able to see the publication happen.
-Make sure to create some entries with a draft `status` and a `published_at` that is before the current date.
+Make sure to create some entries with a draft `status` and a `publish_at` that is before the current date.
 
 The goal will be to check every minute if there is `draft` articles that have a `publish_at` lower that the current date.
 
@@ -46,7 +46,7 @@ Please note that Strapi's built in CRON feature will not work if you plan to use
 
 ## Business logic
 
-Now we can start writting the publishing logic. The code that will fetch all `draft` **Articles** with a `published_at` that is before the current date.
+Now we can start writting the publishing logic. The code that will fetch all `draft` **Articles** with a `publish_at` that is before the current date.
 
 Then we will update the `status` of all these articles to `published`.
 
